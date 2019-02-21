@@ -6,17 +6,49 @@ class TestComponent extends React.Component {
     super(props);
 
   }
+  getGrid = () =>{
+    let {column, content} = this.props;
+    let cellCount = content.length;
+    this.grid = [];
+    for(let i=0; i< cellCount; i=(i+column)){
+      this.grid.push(this.getRows(content.slice(i, i+column)));
+    }
+    return this.grid;
+  }
+  getRows = (columns) => {
+    let {column} = this.props;
+    let cls_column = 'col-md-'+Math.floor(12/column);
+    return (
+      <div className='row'>
+        {
+          columns.reduce((arrCol,col)=>{
+            arrCol.push(this.getCell(col, cls_column));
+            return arrCol;
+          },[])
+        }
+      </div>
+    );
+  }
+  getCell = (param, cls) => {
+    return (
+      <div className={cls} style={{backgroundColor: param.color}}>
+        {param.text}
+      </div>
+    );
+  }
   render(){
     let {props} = this;
     return (
       <div className={props.className + ' test-component'} >
-        <div></div>
-        {this.props.children}
+        {this.getGrid()}
+        <span>Test child Component</span>
       </div>
     );
   }
 }
 TestComponent.defaultProps = {
+  column: 1,
+  content: [],
   className: ''
 };
 export default TestComponent;

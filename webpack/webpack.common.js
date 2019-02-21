@@ -14,6 +14,7 @@ module.exports = {
     //   title: 'test__package'
     // })
   ],
+  devtool: 'source-map',
   module: {
     rules: [
       {

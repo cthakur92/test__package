@@ -8,7 +8,13 @@ class TestContainer extends React.Component {
     }
     render(){
       return (
-        <TestComponent>
+        <TestComponent column='2' content={[
+          {text: 'text1', color: 'red'},
+          {text: 'text2', color: 'blue'},
+          {text: 'text3', color: 'green'},
+          {text: 'text4', color: 'yellow'},
+          {text: 'text5', color: 'black'},
+        ]}>
             <span>Test child Component</span>
         </TestComponent>
       );
