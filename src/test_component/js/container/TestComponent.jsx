@@ -1,6 +1,6 @@
 import React from 'react';
 require('./../../css/test_component.scss');
-
+import loading from './../../../../images/loading.png';
 class TestComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -41,7 +41,8 @@ class TestComponent extends React.Component {
     return (
       <div className={props.className + ' test-component'} >
         {this.getGrid()}
-        <span>Test child Component</span>
+        <span>Test image:</span>
+        <span><img src={loading} /></span>
       </div>
     );
   }
