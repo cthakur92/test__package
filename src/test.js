@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {TestComponent} from "./index";
 
+require('bootstrap/dist/css/bootstrap.css');
 class TestContainer extends React.Component {
     constructor(props) {
       super(props);
