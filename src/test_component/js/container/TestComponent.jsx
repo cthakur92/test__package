@@ -11,27 +11,27 @@ class TestComponent extends React.Component {
     let cellCount = content.length;
     this.grid = [];
     for(let i=0; i< cellCount; i=(i+column)){
-      this.grid.push(this.getRows(content.slice(i, i+column)));
+      this.grid.push(this.getRows(content.slice(i, i+column), i));
     }
     return this.grid;
   }
-  getRows = (columns) => {
+  getRows = (columns, i) => {
     let {column} = this.props;
     let cls_column = 'col-md-'+Math.floor(12/column);
     return (
-      <div className='row'>
+      <div className='row' key={'row__'+i}>
         {
-          columns.reduce((arrCol,col)=>{
-            arrCol.push(this.getCell(col, cls_column));
+          columns.reduce((arrCol,col, j)=>{
+            arrCol.push(this.getCell(col, cls_column, j));
             return arrCol;
           },[])
         }
       </div>
     );
   }
-  getCell = (param, cls) => {
+  getCell = (param, cls, j) => {
     return (
-      <div className={cls} style={{backgroundColor: param.color}}>
+      <div className={cls} key={'col_'+j} style={{backgroundColor: param.color}}>
         {param.text}
       </div>
     );

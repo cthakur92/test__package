@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {TestComponent} from "./index";
+// const __t = require('./../dist/lib.js');
+// import {TestComponent} from "./../dist/lib.js";
+import {TestComponent} from "./index.js";
 
 require('bootstrap/dist/css/bootstrap.css');
 class TestContainer extends React.Component {
     constructor(props) {
       super(props);
       this._test_content = [];
+      window._TestComponent = TestComponent;
+      // window.__t = __t;
     }
     render(){
       this._test_content = [

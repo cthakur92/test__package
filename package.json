@@ -2,7 +2,7 @@
   "name": "test__package",
   "version": "1.0.0",
   "description": "A test package that exports a react compoenent",
-  "main": "index.js",
+  "main": "dist/lib.js",
   "files": [
     "dist"
   ],
@@ -15,7 +15,6 @@
   "author": "",
   "license": "ISC",
   "peerDependencies": {
-    "bootstrap": "^4.3.1",
     "prop-types": "^15.6.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"

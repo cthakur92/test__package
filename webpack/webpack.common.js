@@ -7,7 +7,10 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, "./../dist")
+    path: path.resolve(__dirname, "./../dist"),
+    library: 'test__package',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
   plugins: [
     // new HtmlWebpackPlugin({

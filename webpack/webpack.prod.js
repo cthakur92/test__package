@@ -1,6 +1,6 @@
 const merge = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+// const CleanWebpackPlugin = require('clean-webpack-plugin');
 const common = require('./webpack.common.js');
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const nodeExternals = require('webpack-node-externals');
@@ -22,9 +22,13 @@ module.exports = merge(common, {
   externals : [nodeExternals()],
   plugins: [
     // new BundleAnalyzerPlugin(),
-    new CleanWebpackPlugin(['dist'],{
-      root: baseDir,
-    }),
+    // new CleanWebpackPlugin(['dist'],{
+    //   root: baseDir,
+    // }),
     new MiniCssExtractPlugin('style.css')
-  ]
+  ],
+  optimization: {
+		// We no not want to minimize our code.
+		minimize: false
+	},
 });
