@@ -12,10 +12,16 @@
     "syntax-dynamic-import",
     "transform-object-rest-spread",
     ["transform-class-properties", { "spec": true }],
+    ["transform-rename-import", { "original": "^(.+?)\\.scss$", "replacement": "$1.css" }]
   ],
   "env": {
     "test": {
       "presets": ["react", "env", "stage-2"]
+    },
+    "production": {
+      "plugins": [
+        ["transform-rename-import", { "original": "^(.+?)\\.scss$", "replacement": "$1.css" }]
+      ]
     }
   }
 }
