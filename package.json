@@ -14,7 +14,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "transpile": "babel src -d dist --copy-files",
     "compile": "npm-run-all  compile:copy compile:styles compile:scripts",
-    "compile:scripts": "cross-env NODE_ENV=production babel --root-mode upward src  --out-dir dist --ignore 'src/tests','*/*.scss'",
+    "compile:scripts": "cross-env NODE_ENV=production babel --root-mode upward src  --out-dir dist ",
     "compile:styles": "node-sass src --include-path node_modules/ --include-path ../../node_modules/ --output dist",
     "compile:copy": "cpx src/**/*.{html,png,jpg} dist"
   },

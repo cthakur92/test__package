@@ -19,7 +19,14 @@
     },
     "production": {
       "plugins": [
-        ["transform-rename-import", { "original": "^(.+?)\\.scss$", "replacement": "$1.css" }]
+        [
+          "transform-rename-import", {
+            "replacements": [
+              { "original": "^(.+?)\\.jsx$", "replacement": "$1.js" },
+              { "original": "^(.+?)\\.scss$", "replacement": "$1.css" }
+            ]
+          }
+        ]
       ]
     }
   }
