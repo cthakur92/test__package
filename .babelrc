@@ -11,8 +11,7 @@
     "react-hot-loader/babel",
     "syntax-dynamic-import",
     "transform-object-rest-spread",
-    ["transform-class-properties", { "spec": true }],
-    ["transform-rename-import", { "original": "^(.+?)\\.scss$", "replacement": "$1.css" }]
+    ["transform-class-properties", { "spec": true }]
   ],
   "env": {
     "test": {
