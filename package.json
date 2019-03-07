@@ -20,12 +20,14 @@
   },
   "author": "",
   "license": "ISC",
-  "peerDependencies": {
+  "dependencies": {
     "prop-types": "^15.6.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
   },
+  "peerDependencies": {},
   "devDependencies": {
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
@@ -59,8 +61,5 @@
     "webpack-dev-server": "^3.1.14",
     "webpack-merge": "^4.2.1",
     "webpack-node-externals": "^1.7.2"
-  },
-  "dependencies": {
-    "babel-plugin-syntax-dynamic-import": "^6.18.0"
   }
 }

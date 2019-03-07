@@ -3,7 +3,7 @@ const path = require("path")
 const baseDir = path.resolve(__dirname, './../');
 module.exports = {
   entry: {
-    lib: baseDir +  '/src/index.js'
+    lib: baseDir +  '/src/test.js'
   },
   output: {
     filename: '[name].js',

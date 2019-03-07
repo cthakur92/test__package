@@ -19,7 +19,7 @@ module.exports = merge(common, {
       }
     ]
   },
-  externals : [nodeExternals()],
+  // externals : [nodeExternals()],
   plugins: [
     // new BundleAnalyzerPlugin(),
     // new CleanWebpackPlugin(['dist'],{
