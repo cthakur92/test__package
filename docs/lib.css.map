@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://test__package/./src/test_component/css/test_component.scss"],"names":[],"mappings":"AAAA;AACA;AACA,eAAe;AACf;AACA,eAAe","file":"lib.css","sourcesContent":[".test-component {\n  color: black;\n  z-index: 999; }\n  .test-component .image_label {\n    color: red; }\n"],"sourceRoot":""}
