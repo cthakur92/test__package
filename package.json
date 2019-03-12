@@ -2,21 +2,21 @@
   "name": "test__package",
   "version": "1.0.0",
   "description": "A test package that exports a react compoenent",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "files": [
-    "dist"
+    "lib/"
   ],
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "rimraf lib",
     "serve": "webpack-dev-server --config webpack/webpack.dev.js",
     "build": "webpack --config webpack/webpack.prod.js",
     "profile": "webpack --config webpack/webpack.prod.js --profile --json > stats.json",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "transpile": "babel src -d dist --copy-files",
+    "transpile": "babel src -d lib --copy-files",
     "compile": "npm-run-all  compile:copy compile:styles compile:scripts",
-    "compile:scripts": "cross-env NODE_ENV=production babel --root-mode upward src  --out-dir dist ",
-    "compile:styles": "node-sass src --include-path node_modules/ --include-path ../../node_modules/ --output dist",
-    "compile:copy": "cpx src/**/*.{html,png,jpg} dist"
+    "compile:scripts": "cross-env NODE_ENV=production babel --root-mode upward src  --out-dir lib ",
+    "compile:styles": "node-sass src --include-path node_modules/ --include-path ../../node_modules/ --output lib",
+    "compile:copy": "cpx src/**/*.{html,png,jpg} lib"
   },
   "author": "",
   "license": "ISC",
