@@ -19,6 +19,7 @@ class TestContainer extends React.Component {
       return (
         <TestComponent column='2' content={this._test_content}>
             <span>Test child Component</span>
+            <span>Test branch</span>
         </TestComponent>
       );
     }
